@@ -137,7 +137,6 @@
 								</form>
 							</div>
 						</div>
-
 						<div class="wrap-icon right-section">
 							<div class="wrap-icon-section wishlist">
 								<a href="#" class="link-direction">
@@ -152,7 +151,9 @@
 								<a href="#" class="link-direction">
 									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 									<div class="left-info">
-										<span class="index">4 items</span>
+                                        @if(\Gloudemans\Shoppingcart\Facades\Cart::count() > 0)
+										<span class="index"> {{ \Gloudemans\Shoppingcart\Facades\Cart::count() }}</span>
+                                        @endif
 										<span class="title">CART</span>
 									</div>
 								</a>
@@ -165,10 +166,8 @@
 								</a>
 							</div>
 						</div>
-
 					</div>
 				</div>
-
 				<div class="nav-section header-sticky">
 					<div class="header-nav-section">
 						<div class="container">
